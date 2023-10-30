@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Chart Example</title>
+    <script src="https://cdn.jsdelivr.net/npm/flotr2@0.1.0/flotr2.min.js"></script>
+</head>
+
+<body>
+    <div id="chart" style="width: 600px; height: 300px;"></div>
+    <script>
+        window.onload = function () {
+            data = [
+                { data: [[0, 22.0]], label: "asutin racing" },
+                { data: [[1, 15.6]], label: "akrapovic"},
+                { data: [[2, 30.4]], label: "spark" },
+                { data: [[3, 17.8]], label: "sc project" },
+                { data: [[4, 14.2]], label: "arrow" },
+            ];
+            Flotr.draw(document.getElementById("chart"), data, {
+                title: "pengunaan jenis ban pada motogp",
+                pie: {
+                    show: true,
+                },
+                yaxis: {
+                    showLabels: false,
+                },
+                xaxis: {
+                    showLabels: false,
+                },
+                grid: {
+                    horizontalLines: false,
+                    verticalLines: false,
+                }
+            });
+        };
+    </script>
+</body>
+
+</html>
